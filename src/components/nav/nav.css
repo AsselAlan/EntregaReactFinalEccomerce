@@ -1,0 +1,57 @@
+*{
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+.navBar{
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.699);
+    height: 100px;
+    padding-top: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.containerNavLiks{
+    margin-left: 10%;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: end;
+}
+
+.tittleNav{
+    margin: 10px;
+}
+
+.navLink{
+    width: 0;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: white;
+    border: none;
+    text-decoration: none;
+}
+
+.navLink:hover{
+    color: #844DE1;
+}
+
+.navLinkActive{
+    font-weight: 800;
+}
+
+.formNav{
+    width: 50%;
+    background-color: transparent;
+    margin: 10px;
+    margin-right: 5%;
+}
+
+.buttonSearch{
+    margin-right: 50%;  
+    position: fixed;
+}

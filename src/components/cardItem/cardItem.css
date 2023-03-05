@@ -1,0 +1,71 @@
+.containerCardItem{
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 450px;
+    border-radius: 20px;
+    margin: 10%;
+    padding: 5%;
+    position: relative;
+}
+
+.containerCardItem .cardItemHover{
+    display: none;
+}
+.containerCardItem .cardItemHover .button{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    border: solid 2px white;
+    border-radius: 20px;
+    padding: 3% 0%;
+    width: 70%;
+    margin: 10%;
+}
+
+.containerCardItem .cardItemHover .button:hover{
+    background-color: #5E16EA;
+    border: solid 2px #5E16EA;
+}
+
+.containerCardItem:hover .cardItemHover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.774);
+    border-radius: 20px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 450px;
+}
+
+.containerCardItem h3{
+    font-weight: 400;
+    font-size: 20px;
+    color: #5E16EA;
+    margin: 0;
+}
+
+.cardItemFooter{
+    border-top: 1px solid rgba(0, 0, 0, 0.219);
+}
+
+.containerCardItem .favIconContainer svg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5%;
+    margin-top: 7%;
+}
+
+.cardClasificacion{
+    display: flex;
+    justify-content: end;
+}
+
