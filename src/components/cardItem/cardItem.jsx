@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../../context/cartContext'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+ 
+
 import './cardItem.css'
 
 const CardItem = ({product}) => {
@@ -9,11 +14,28 @@ const CardItem = ({product}) => {
 
   const {addCart} = useCartContext()
 
+  const notify = () =>  toast.success("Producto añadido con exito.", {
+    position: "top-right",
+    autoClose: 1000,
+    hideProgressBar: true,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+  });
+
+ 
+
   return (
     <div className='containerCardItem d-flex flex-column align-items-center'>
+          <ToastContainer />
           <div className='cardItemHover'>
-            <button className="button" onClick={()=>{addCart({...product,cantidad})}}>Agregar al carrito</button>
-            <Link to={`/detalle/${product.id}`} className="button">Ver mas</Link>
+            <button className="button" onClick={()=>{
+              notify()
+              addCart({...product,cantidad})}}>
+              Agregar al carrito</button>
+            <Link to={`/EntregaReactFinalEccomerce/detalle/${product.id}`} className="button">Ver mas</Link>
           </div>
             <div className='favIconContainer'>
               <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,5 +1,6 @@
 .itemsContainer{
     width: 100%;
+    min-height: 100vh;
     background: rgb(149,149,149);
     padding-top: 120px;
     display: grid;

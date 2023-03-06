@@ -10,30 +10,17 @@ export const CartContextProvider = ({children}) =>{
     const [cartList, setCartList] = useState([])
     
     const addCart = (newProduct) =>{
-
-        
-        console.log("inicio");
-        console.log(cartList);
-
-        if(cartList.length !== 0){
-            console.log("cartList tiene elementos");
-            
-            let verifElem 
+        if(cartList.length !== 0){            
+            let verifElem = false
 
             cartList.map((elem)=>{
                 
                 if(elem.id === newProduct.id){
                     return verifElem = true
-                }if(elem.id !== newProduct.id){
-                    verifElem = false
                 }})
-
             if(verifElem){
                 cartList.find((elem)=>{
                     if(elem.id === newProduct.id){
-                        console.log("El producto existe");
-                        console.log(elem.id);
-                        console.log(newProduct.id);
                         elem.cantidad = elem.cantidad + 1
                     }
                 })
@@ -44,19 +31,40 @@ export const CartContextProvider = ({children}) =>{
             }
 
         }else{
-            console.log("cartList no tiene elementos");
             setCartList([
                 ...cartList,
                 newProduct]);
         }
-        console.log("final");
-        console.log(cartList);
+    }
+
+    const modifCantidad = (variable, idProducto) =>{
+        cartList.map((elem)=>{                
+            if(elem.id === idProducto){
+                if(variable){
+                    elem.cantidad = elem.cantidad + 1
+                    
+                }else{
+                    elem.cantidad = elem.cantidad - 1
+                }
+                setCartList([...cartList])
+            }})
+    }
+
+    const deleteProduct = (idProducto) =>{
+        for (let i = 0; i < cartList.length; i++) {
+            if(cartList[i].id === idProducto){
+                cartList.splice(i,1)
+                setCartList([...cartList])
+            }
+        }
     }
 
     return (
         <CartContext.Provider value={{
             cartList,
-            addCart
+            addCart,
+            modifCantidad,
+            deleteProduct
         }}>
             {children}
         </CartContext.Provider>

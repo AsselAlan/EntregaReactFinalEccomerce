@@ -1,3 +1,10 @@
 .cartItemContaine{
-    background-color: aquamarine;
+    background: white;
+    height: 150px;
+    margin: 5%;
+    margin-top: 0;
+}
+
+.button{
+    cursor: pointer;
 }

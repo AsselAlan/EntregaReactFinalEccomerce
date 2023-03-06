@@ -50,12 +50,12 @@ import { NavLink } from 'react-router-dom';
                 <Offcanvas.Body>
 
                   <Container className='containerNavLiks'>
-                    <NavLink to="/" className={({isActive})=>isActive ? 'navLink navLinkActive' : 'navLink'}>HOME</NavLink>
-                    <NavLink to="/store" className={({isActive})=>isActive ? 'navLink navLinkActive' : 'navLink'}>STORE</NavLink>
+                    <NavLink to="/EntregaReactFinalEccomerce/" className={({isActive})=>isActive ? 'navLink navLinkActive' : 'navLink'}>HOME</NavLink>
+                    <NavLink to="/EntregaReactFinalEccomerce/store" className={({isActive})=>isActive ? 'navLink navLinkActive' : 'navLink'}>STORE</NavLink>
                   </Container>  
 
                   <Form className="d-flex formNav">
-                    <NavLink to="/cart" className={({isActive})=>isActive ? 'navLink navLinkActive' : 'navLink'}>CARRITO</NavLink>
+                    <NavLink to="/EntregaReactFinalEccomerce/cart" className={({isActive})=>isActive ? 'navLink navLinkActive' : 'navLink'}>CARRITO</NavLink>
                     {/* <ButtonSearch className="buttonSearch"/>
                     <Carrito />
                     <FavsNav /> */}

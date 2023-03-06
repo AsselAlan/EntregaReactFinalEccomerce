@@ -16,26 +16,26 @@ function App() {
       <CartContextProvider>
         <Nav />
         <Routes>
-          <Route path='/' element={
+          <Route path='/EntregaReactFinalEccomerce/' element={
               <Home />
             } />
-            <Route path='/store' element={
+            <Route path='/EntregaReactFinalEccomerce/store' element={
               <ItemListContainer />
             } />
-            <Route path='/cart' element={
+            <Route path='/EntregaReactFinalEccomerce/cart' element={
               <CartContainer />
             } />
 
-            <Route path='/detalle/:idProducto' element={
+            <Route path='/EntregaReactFinalEccomerce/detalle/:idProducto' element={
               <ItemDetailContainer />
             }/>
-            <Route path='/categorias/samsung' element={
+            <Route path='/EntregaReactFinalEccomerce/categorias/samsung' element={
               <div>Hola samsung</div>
             } />
-            <Route path='/categorias/motorola' element={
+            <Route path='/EntregaReactFinalEccomerce/categorias/motorola' element={
               <div>Hola motorola</div>
             } />
-            <Route path='/categorias/xiaomi' element={
+            <Route path='/EntregaReactFinalEccomerce/categorias/xiaomi' element={
               <div>Hola xiaomi</div>
             } />
         </Routes>

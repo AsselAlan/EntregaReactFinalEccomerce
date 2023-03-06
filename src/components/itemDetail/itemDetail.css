@@ -1,12 +1,12 @@
 .itemDetalleContainer{
     background-color: rgb(149,149,149);
-    padding-bottom: 5%;
     padding-top: 110px;
     width: 100%;
+    min-height: 100vh;
 }
 
 .cardDetalles{
     background-color: white;
-
     width: 90%;
+    height: 80%;
 }
