@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import './itemListContainer.css'
+import './itemListContainerCategoria.css'
 
 import getProducts from '../../getProducts.js'
 import CardItem from '../cardItem/cardItem'
 import NavCategorias from '../navCategorias/navCategorias'
+import { useParams } from 'react-router-dom'
 
 
 
-const ItemListContainer = () => {
+const ItemListContainerCategoria = () => {
+
   
   const [productos, setProductos] = useState([])
+  const {categoria} = useParams()
 
   useEffect(()=>{
     getProducts()
@@ -22,7 +25,9 @@ const ItemListContainer = () => {
     },[]);
 
     const cardItems = productos.map((elem)=>{
-      return <CardItem product={elem}/>
+      if(elem.categoria === categoria){
+        return <CardItem product={elem}/>
+      }
     })
 
     return (
@@ -37,4 +42,4 @@ const ItemListContainer = () => {
     )
   }
   
-  export default ItemListContainer
+  export default ItemListContainerCategoria

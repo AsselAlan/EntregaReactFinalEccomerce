@@ -7,6 +7,7 @@ import ItemListContainer from './components/itemListContainer/itemListContainer'
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer'
 import { CartContextProvider } from './context/cartContext'
 import CartContainer from './components/cartContainer/cartContainer'
+import ItemListContainerCategoria from './components/itemListContainerCategoria/itemListContainerCategoria'
 
 function App() {
 
@@ -29,14 +30,8 @@ function App() {
             <Route path='/EntregaReactFinalEccomerce/detalle/:idProducto' element={
               <ItemDetailContainer />
             }/>
-            <Route path='/EntregaReactFinalEccomerce/categorias/samsung' element={
-              <div>Hola samsung</div>
-            } />
-            <Route path='/EntregaReactFinalEccomerce/categorias/motorola' element={
-              <div>Hola motorola</div>
-            } />
-            <Route path='/EntregaReactFinalEccomerce/categorias/xiaomi' element={
-              <div>Hola xiaomi</div>
+            <Route path='/EntregaReactFinalEccomerce/categorias/:categoria' element={
+              <ItemListContainerCategoria />
             } />
         </Routes>
       </CartContextProvider>

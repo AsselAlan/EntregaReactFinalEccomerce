@@ -1,8 +1,8 @@
 .cartItemContaine{
     background: white;
-    height: 150px;
-    margin: 5%;
+    min-height: 135px;
     margin-top: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.419);
 }
 
 .button{

@@ -5,6 +5,8 @@ import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
+import imgCarrito from '../../assets/carrito.svg'
+
 
 
 // import ButtonSearch from './buttonSearch/buttonSearch';
@@ -15,6 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import  './nav.css'
 
 import { NavLink } from 'react-router-dom';
+import Search from '../search/search';
   
   const Nav = () => {
 
@@ -54,11 +57,20 @@ import { NavLink } from 'react-router-dom';
                     <NavLink to="/EntregaReactFinalEccomerce/store" className={({isActive})=>isActive ? 'navLink navLinkActive' : 'navLink'}>STORE</NavLink>
                   </Container>  
 
-                  <Form className="d-flex formNav">
-                    <NavLink to="/EntregaReactFinalEccomerce/cart" className={({isActive})=>isActive ? 'navLink navLinkActive' : 'navLink'}>CARRITO</NavLink>
-                    {/* <ButtonSearch className="buttonSearch"/>
-                    <Carrito />
-                    <FavsNav /> */}
+                  <Form className="d-flex justify-content-end formNav">
+                    <NavLink to="/EntregaReactFinalEccomerce/cart" className={({isActive})=>isActive ? 'navLink navLinkActive' : 'navLink'}>
+                    <svg width="32" height="26" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_51_45)">
+                      <path d="M13.624 25.5781C13.09 25.5781 12.5551 25.5942 12.0211 25.5753C10.5058 25.5223 9.27938 24.5526 8.9273 23.1483C8.57619 21.7497 9.22005 20.3292 10.535 19.6029C10.605 19.5641 10.678 19.5291 10.7957 19.4675C10.6362 18.7441 10.4776 18.0083 10.3103 17.2744C9.20449 12.427 8.08989 7.58152 7.00155 2.73034C6.89748 2.26539 6.70296 2.14608 6.23514 2.1546C4.56615 2.18301 2.8962 2.17448 1.22624 2.16217C0.293512 2.1546 -0.254063 1.38284 0.116498 0.626233C0.317827 0.214314 0.68158 0.0116683 1.13287 0.00977445C3.30469 0.000305034 5.47748 -0.00537662 7.6493 0.0116683C8.3379 0.01735 8.69971 0.377188 8.86019 1.08645C9.09556 2.13092 9.33482 3.1754 9.58284 4.26628H10.216C18.7097 4.26628 27.2035 4.26628 35.6972 4.26628C35.8431 4.26628 35.989 4.26249 36.1349 4.26722C37.0258 4.29563 37.5111 4.89694 37.2718 5.72551C36.3411 8.94228 35.3967 12.1543 34.4562 15.3682C33.999 16.9297 33.5361 18.4893 33.0877 20.0527C32.7706 21.1588 32.5674 21.3197 31.3954 21.3197C25.1056 21.3197 18.8167 21.3197 12.5269 21.3197C11.5543 21.3197 10.9999 21.7175 11.0087 22.4078C11.0174 23.0972 11.5621 23.4769 12.5473 23.4769C18.8527 23.4769 25.1581 23.4769 31.4644 23.4769C32.4721 23.4769 32.9817 23.8367 32.9729 24.5412C32.9642 25.2429 32.4652 25.5819 31.4411 25.5829C31.0851 25.5829 30.7282 25.5829 30.3528 25.6122C31.2816 25.9011 32.0548 26.3793 32.5392 27.2258C33.0264 28.0771 33.0848 28.9644 32.7745 29.8773C32.3495 31.1282 30.8838 32.0912 29.5737 31.9927C27.9961 31.8744 26.7084 30.793 26.4633 29.382C26.1706 27.6889 26.9613 26.5402 29.0913 25.5961H14.9759C15.8658 25.8944 16.6293 26.3537 17.1117 27.1718C17.5961 27.9928 17.706 28.8508 17.4133 29.7646C16.9892 31.0846 15.5731 32.0808 14.2027 31.9946C12.6105 31.8942 11.3296 30.8119 11.0787 29.3536C10.7879 27.6699 11.6165 26.4597 13.625 25.5781H13.624Z" fill="white"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_51_45">
+                      <rect width="37.3333" height="32" fill="white"/>
+                      </clipPath>
+                      </defs> 
+                    </svg>  
+                    </NavLink>
+                    <Search />
                   </Form>
 
                 </Offcanvas.Body>

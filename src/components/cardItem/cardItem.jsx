@@ -15,7 +15,7 @@ const CardItem = ({product}) => {
   const {addCart} = useCartContext()
 
   const notify = () =>  toast.success("Producto añadido con exito.", {
-    position: "top-right",
+    position: "bottom-right",
     autoClose: 1000,
     hideProgressBar: true,
     closeOnClick: false,

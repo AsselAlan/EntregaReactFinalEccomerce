@@ -51,10 +51,12 @@ export const CartContextProvider = ({children}) =>{
     }
 
     const deleteProduct = (idProducto) =>{
+        console.log(cartList);
         for (let i = 0; i < cartList.length; i++) {
             if(cartList[i].id === idProducto){
                 cartList.splice(i,1)
                 setCartList([...cartList])
+                console.log(cartList);
             }
         }
     }

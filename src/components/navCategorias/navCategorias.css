@@ -1,0 +1,9 @@
+.navCategoriasContainer{
+    width: 100%;
+    padding-top: 120px;
+    background: rgb(149,149,149);
+}
+
+.navCategoriasContainer .navLink{
+    font-size: 15px ;
+}

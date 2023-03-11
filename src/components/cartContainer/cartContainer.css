@@ -12,7 +12,10 @@
     background: rgb(149,149,149);
     padding-top: 120px;
     padding-bottom: 60px;
-    min-height: 100vh;
+    min-height: 80vh;
+}
+.cartContainer h3{
+    color: rgb(94, 22, 234);;
 }
 .cartItemContaine img{
     max-height: 150px;
@@ -22,4 +25,12 @@ a{
     text-decoration: none;
 }
 
-.cartFoterContainer{}
+.cartFoterContainer{
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+    padding: 0 10%;
+    min-height: 20vh;
+    background-color: rgb(149,149,149);
+}
